@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, {'content-type': 'text/html'});
     res.write("<h1>Hello World</h1>");
     res.end();//
-  } else if (req.url === '/secret') {
+  } else if (req.url === '/nodejs') {
     const homePage = fs.readFileSync('index.html');
     res.writeHead(200, {'content-type': 'text/html'});
     res.write(homePage);

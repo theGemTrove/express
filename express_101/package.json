@@ -1,0 +1,16 @@
+{
+  "name": "express_101",
+  "version": "1.0.0",
+  "description": "Basic Study Of Express",
+  "main": "expressServer.js",
+  "scripts": {
+    "startServer": "nodemon expressServer.js",
+    "startRouter": "nodemon expressRouter.js",
+    "startStatic": "nodemon staticFiles.js"
+  },
+  "author": "ttog",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
