@@ -1,0 +1,12 @@
+<h1>HBS Rendered File</h1>
+Render Success: {{ success }}
+{{{ html }}}
+{{!-- each, if --}}
+{{#each countires}}
+    {{#if this.western}}
+        <li>{{this.name}} -- {{this.capital}}</li>
+    {{/if}}
+    {{#unless this.western}}
+        <li>{{this.name}} -- {{this.capital}}</li>
+    {{/unless}}
+{{/each}}

@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title Pug Rendered Template
+        script(src='https://code.jqery.com/jquery.js')
+        link(href='./styles/style.css', rel='stylesheet')
+    body
+        h1 Rendered From The Pug Template
+        div
+            p This is a message!
+            p This is another message
+        p This p is outside of the div
+        div
+            h2 Passing Data
+            p Success: #{success}
+            p !{html}

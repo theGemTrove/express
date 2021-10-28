@@ -2,23 +2,23 @@ const {helmetize} = require("./inclusions/helmet");
 module.exports.configureSecurityForApp = expressApp => {
   // "Prioritize Helmetize()" ~ PseudoSage Dustin.
   // The priority is to helmetize the app object upon invoking/building the app object.
-  const App = expressApp().use(helmetize());
+  const SecuredExpressApp = expressApp().use(helmetize());
 
   // Attach Rate Limit
   require('./inclusions/rateLimit')
-    .enableRateLimits(App);
+    .enableRateLimits(SecuredExpressApp);
 
   // Attach HTTP Param Pollution Protection (HPP)
   require('./inclusions/hpp')
-    .enableHPP(App);
+    .enableHPP(SecuredExpressApp);
 
   // Attach XSS Clean
   require('./inclusions/xssClean')
-    .enableXSSClean(App);
+    .enableXSSClean(SecuredExpressApp);
 
   // Attach Mongo Sanitize
   require('./inclusions/expressMongoSantize')
-    .enableMongoSanitize(App);
+    .enableMongoSanitize(SecuredExpressApp);
 
-  return App;
+  return SecuredExpressApp;
 };

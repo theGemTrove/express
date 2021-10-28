@@ -3,7 +3,8 @@ const
   express = require('express');
 
 // Generate an express app with some security configurations
-const App = require('../config/security').configureSecurityForApp(express);
+const App = require('../config/security')
+  .configureSecurityForApp(express);
 
 // Set The Server Side Rendering Template Engine
 require('../config/templateEngine')
@@ -14,7 +15,11 @@ require('../config/templateEngine')
 
 // Link Application Routes
 App.get('/', (req, res, next) => {
-  res.status(200).render('index.ejs');
+  const { ttogArtifact } = require('../Examples/images/baseEnc64/ttog');
+  res.status(200).render('index', {
+    success: true,
+    html: `<p><img src=${ttogArtifact} alt="Trove of Gems Logo" /></p>`
+  });
 });
 
 // Serve Public & Static Assets ??
