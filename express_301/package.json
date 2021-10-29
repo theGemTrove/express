@@ -1,0 +1,25 @@
+{
+  "name": "express_301",
+  "version": "1.0.0",
+  "description": "Third Level Of ExpressJS Study",
+  "main": "index.js",
+  "author": "ttog",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.5.0",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.2",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "parseurl": "^1.3.3",
+    "pug": "^3.0.2",
+    "uid-safe": "^2.1.5",
+    "xss-clean": "^0.1.1"
+  },
+  "scripts": {
+    "startServer": "nodemon main"
+  }
+}

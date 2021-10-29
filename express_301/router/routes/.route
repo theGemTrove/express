@@ -1,0 +1,12 @@
+const
+  express = require('express'),
+  router = express.Router({ mergeParams: true }),
+  {
+    noRoutesLoaded
+  } = require('../../controllers/miscAction.controller');
+
+router
+  .route('/')
+  .get(noRoutesLoaded);
+
+module.exports = router;
