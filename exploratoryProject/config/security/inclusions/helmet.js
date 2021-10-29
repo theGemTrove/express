@@ -7,7 +7,6 @@ module.exports.helmetize = () => {
     useDefaults: true,
     directives: {
       scriptSrc: ["'self'", "'unsafe-inline'"],
-     /* styleSrc: ["'self'", "'unsafe-inline'"]*/
     }
   };
 

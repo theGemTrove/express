@@ -1,8 +1,14 @@
-const asyncHandler = require('../middleware/async.middleware');
+const asyncHandler = require('../../middleware/async.middleware');
 
 module.exports = (() => {
   const backendWelcome = asyncHandler(async (req, res, next) => {
-    res.json({ message: 'Welcome to the express backend. Use /api/vX to get started.' });
+    res.json({
+      message: 'Welcome to the express backend. Review the paths below to get started.',
+      paths: [
+        { availablePath: '/api/', version: 'vX', example: '/api/v1/[route]' },
+        { availablePath: '/sfe/', version: 'vX', example: '/sfe/v1/home' },
+      ]
+    });
   });
 
   const noAPIVersionProvided = asyncHandler(async (req, res, next) => {

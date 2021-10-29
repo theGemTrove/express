@@ -2,11 +2,11 @@ const
   express = require('express'),
   router = express.Router({ mergeParams: true }),
   {
-    noRoutesLoaded
-  } = require('../../controllers/miscAction.controller');
+    loadServerFrontend
+  } = require('../../../controllers/sfe/home.controller');
 
 router
   .route('/')
-  .get(noRoutesLoaded);
+  .get(loadServerFrontend);
 
 module.exports = router;

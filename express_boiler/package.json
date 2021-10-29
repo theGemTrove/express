@@ -2,7 +2,7 @@
   "name": "express_boiler",
   "version": "1.0.0",
   "description": "TTOG Express Boilerplate",
-  "main": "index.js",
+  "main": "server.js",
   "author": "ttog",
   "license": "MIT",
   "dependencies": {

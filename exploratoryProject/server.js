@@ -1,6 +1,6 @@
 // Generate an express app with some security configurations
 const
-  PORT = process.env.PORT || 7777,
+  PORT = process.env.PORT || 7780,
   express = require('express'),
   App =
     require('./config/security')

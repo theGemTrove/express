@@ -2,7 +2,7 @@
   "name": "exploratoryProject",
   "version": "1.0.0",
   "description": "Test Project Built Using ttog Express Boiler",
-  "main": "index.js",
+  "main": "server.js",
   "author": "ttog",
   "license": "MIT",
   "dependencies": {

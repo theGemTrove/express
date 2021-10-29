@@ -6,8 +6,7 @@ module.exports.helmetize = () => {
   configurableOptions.contentSecurityPolicy = {
     useDefaults: true,
     directives: {
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-     /* styleSrc: ["'self'", "'unsafe-inline'"]*/
+      scriptSrc: ["'self'", "'unsafe-inline'"]
     }
   };
 
