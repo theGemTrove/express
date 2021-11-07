@@ -1,0 +1,15 @@
+<form method="POST" action="/mfe/v1/movie/homepage/search?" class="d-flex search-site-form">
+    <select name="searchType" id="films" class="input-huffle" style="margin-right: 2%; background: #000;">
+        <option selected="true" disabled="disabled">Search Type</option>
+        <option  class="custom-nav-link dd-hover" value="person">Actor</option>
+        <option  class="custom-nav-link dd-hover" value="movie">Movie</option>
+    </select>
+    <input
+            class="form-control me-2 input-huffle" type="search"
+            name="userEnteredKeywords"
+            placeholder="Search" aria-label="Search"
+    >
+    <button class="btn btn-outline-huffle" type="submit">
+        Search
+    </button>
+</form>

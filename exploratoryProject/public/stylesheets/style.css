@@ -1,40 +1,151 @@
-@import url(https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
-.container {
-    position: relative;
-    z-index: 1;
-    max-width: 1100px;
-    margin: 8% auto 0 auto;
+html {
+    min-height: 100vh;
 }
-.container:before, .container:after {
-    content: "";
-    display: block;
-    clear: both;
+
+body {
+    font-family: 'Nanum Myeongjo', serif !important;
+    letter-spacing: 3px;
+    min-height: inherit;
+    overflow-x: hidden;
 }
-.container .info {
-    margin: 50px auto;
+
+article {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.custom-nav-link {
+    color: #ecb939!important;
+}
+
+.dropdown-menu {
+    background-color: #000000!important;
+    color: #ecb939!important;
+}
+
+#main {
+    background-color: #ecb939;
+    min-height: 85vh;
+}
+
+#footer {
+    align-items: center;
+    background-color: #000000;
+    color: #ecb939;
+    display: flex;
+    justify-content: center;
+    min-height: 15vh;
+}
+
+.content-dividers {
+    min-height: 85vh;
+}
+
+.custom-nav-link-disabled {
+    color: #726255!important;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.huffle-nav {
+    background-color: #000000;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.sidebar-left,
+.sidebar-right {
+    background-color: #372e29;
+    color: #ecb939;
+    font-size: .75rem;
+}
+
+.btn-outline-huffle {
+    border-color: #ecb939!important;
+    color: #f0c75e!important;
+}
+
+.input-huffle {
+    background-color: #372e29!important;
+    color: #f0c75e!important;
+}
+
+::placeholder {
+    color: #f0c75e !important;
+    opacity: 1;
+}
+
+#sidebar-left-content {
+    height: 100%;
+    overflow: hidden;
     text-align: center;
 }
-.container .info h1 {
-    margin: 0 0 15px;
-    padding: 0;
-    font-size: 36px;
-    font-weight: 300;
-    color: #1a1a1a;
+
+#main-content {
+    font-size: 2rem;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    width: 100%;
 }
-.container .info span {
-    color: #4d4d4d;
-    font-size: 12px;
+
+#sidebar-right-content {
+    margin: 1rem auto 0 auto;
+    text-align: end;
+    width: 90%;
 }
-.container .info span a {
-    color: #000000;
-    text-decoration: none;
+
+.nav-menu-item:hover,
+.dd-hover:hover {
+    background-color: #ecb939!important;
+    color: #000000!important;
 }
-.container .info span .fa {
-    color: #EF3B3A;
+
+.custom-nav-container {
+    margin: 0!important;
+    padding: 0!important;
 }
-body {
-    background: #FF9933; /* fallback for old browsers */
-    background: linear-gradient(to left, #FF9933, #EEAA00);
-    font-family: "Zen Old Mincho", sans-serif;
+
+.navbar-brand {
+    padding: 0 1rem 0 0!important;
+}
+
+.search-site-form {
+    margin-right: 1%!important;
+}
+
+.movie-tile { transition: all .2s ease-in-out; }
+.movie-tile:hover { transform: scale(1.1); }
+
+@media only screen and (max-width: 768px) {
+    #sidebar-right-content,
+    #sidebar-left-content {
+        text-align: center;
+    }
+
+    .search-site-form {
+        flex-direction: column;
+        margin: 1rem 1rem 1rem 1rem!important;
+    }
+
+    .input-huffle {
+        margin-bottom: 1rem;
+    }
+
+    .btn-outline-huffle{
+        width: 50%;
+    }
+
+    .nav-list-items {
+        margin-left: 1rem;
+    }
+
+    .nav-list-items-submenu {
+        margin-right: 1rem!important;
+    }
 }

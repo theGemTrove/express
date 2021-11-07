@@ -1,0 +1,48 @@
+<%- include('partials/topFileImport') %>
+<div class="col-lg-8 col-md-8 col-sm-12 main-page-content d-flex justify-content-center">
+  <div id="main-content">
+    <h2 class="mt-5 mb-5">
+      <%= _dao.movieToView.original_title %>
+    </h2>
+    <img src="http://image.tmdb.org/t/p/w300<%= _dao.movieToView.poster_path %>"
+         alt="Poster For <%= _dao.movieToView.title %>" />
+    <p style="margin: 2rem auto 0 auto; width: 80%; font-size: 1.5rem">
+      <%= _dao.movieToView.overview %>
+    </p>
+    <div class="container mt-3 mb-5">
+      <div class="row mt-5">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div>
+            <h4 class="mb-3">Movie Details</h4>
+            <div style="font-size: 1.25rem; text-align: left;">
+              <p>
+                Release Date: <%= _dao.movieToView.release_date %>
+              </p>
+              <p>
+                Runtime: <%= _dao.movieToView.runtime %>
+              </p>
+              <p>
+                Average Rating: <%= _dao.movieToView.vote_average %>
+              </p>
+              <p>
+                <a href="<%= _dao.movieToView.homepage %>" target="_blank" rel="noopener noreferrer">
+                  Feature Homepage
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6  col-md-12 col-sm-12">
+          <% if (_dao.movieToView.belongs_to_collection) { %>
+            <h4 class="mb-3"><%= _dao.movieToView.belongs_to_collection.name %></h4>
+            <img src="http://image.tmdb.org/t/p/w300<%= _dao.movieToView.belongs_to_collection.backdrop_path %>"
+                 alt="Poster For <%= _dao.movieToView.belongs_to_collection.name %>" />
+            <img src="http://image.tmdb.org/t/p/w300<%= _dao.movieToView.belongs_to_collection.poster_path %>"
+                 alt="Poster For <%= _dao.movieToView.belongs_to_collection.name %>" />
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/bottomFileImport') %>

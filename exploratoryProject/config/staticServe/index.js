@@ -16,7 +16,12 @@ module.exports.serveStaticAssets = (App, rootDir, express) => {
         '10d'
     };
 
-  App.use('/sfe/v1', express.static(publicPath, serveAssetOptions));
+  App.use([
+    '/mfe/v1/movie/homepage',
+    '/mfe/v1/movie/detail',
+    '/mfe/v1/movie',
+    '/sfe/v1'
+  ], express.static(publicPath, serveAssetOptions));
 
   return App;
 };

@@ -1,0 +1,13 @@
+<div id="sidebar-left-content">
+        <img class="mb-3" src="images/fallingPopcorn.gif" style="width: 100%; height: 25rem;">
+        <h6>Tonight's Random Movie</h6>
+        <div>
+            <div class="random-movie-tile">
+                <a href="/mfe/v1/movie/detail/<%= _dao.randomMovie.id %>" class="p-2">
+                    <img src="http://image.tmdb.org/t/p/w300<%= _dao.randomMovie.poster_path %>"
+                         alt="Poster For <%= _dao.randomMovie.title %>"
+                    />
+                </a>
+            </div>
+        </div>
+</div>

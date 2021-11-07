@@ -4,11 +4,18 @@ module.exports.helmetize = () => {
 
   // Fine-Tuned CSP Options
   configurableOptions.contentSecurityPolicy = {
-    useDefaults: true,
+    useDefaults: false,
     directives: {
-      scriptSrc: ["'self'", "'unsafe-inline'"],
+      defaultSrc: [
+        "'self'"
+      ],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'"
+      ]
     }
   };
-
+  //configurableOptions.contentSecurityPolicy
+  configurableOptions.contentSecurityPolicy = false;
   return helmet(configurableOptions);
 };
